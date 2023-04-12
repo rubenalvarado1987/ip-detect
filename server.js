@@ -6,6 +6,9 @@ const IP = require('ip');
 app.get('/', (req, res) => {
     const ipAddress = IP.address();
     res.send(ipAddress)
+
+    console.log(`IP`,IP);
+    console.log(`ipAddress`,ipAddress);
 })
 
 app.listen(port, () => {
