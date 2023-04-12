@@ -13,7 +13,7 @@ app.get('/address', (req, res) => {
 
 app.get('/ip',function(req, response) {
 
-    console.log("req",req.header)
+    console.log("IP...");
     const ipAddress = req.header('x-forwarded-for') || req.socket.remoteAddress;
     res.send("ipAddress:"+ipAddress);
     
