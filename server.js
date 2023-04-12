@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 
 app.get('/ip',function(req, response) {
 
-    console.log("header",req.header)
+    console.log("req",req.header)
     const ipAddress = req.header('x-forwarded-for') || req.socket.remoteAddress;
     res.send("ipAddress:"+ipAddress);
     
@@ -21,6 +21,6 @@ app.get('/ip',function(req, response) {
 
 app.listen(port, () => {
   console.log(`Example app listening on ports ${port}`)
-  console.log(req.header('x-forwarded-for'))
+  //console.log(req.header('x-forwarded-for'))
 })
 
