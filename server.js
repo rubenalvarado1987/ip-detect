@@ -20,6 +20,7 @@ app.get('/ip',function(req, response) {
   });
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Example app listening on ports ${port}`)
+  console.log(req.header('x-forwarded-for'))
 })
 
