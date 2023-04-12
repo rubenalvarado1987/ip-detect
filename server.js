@@ -3,7 +3,7 @@ const app = express()
 const port = 8080
 const IP = require('ip');
 
-app.get('/', (req, res) => {
+app.get('/address', (req, res) => {
     const ipAddress = IP.address();
     res.send("IP:"+ipAddress)
 
